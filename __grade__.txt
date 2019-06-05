@@ -42,16 +42,16 @@ E,9,1
 <BLANKLINE>
 
 >>> import os; print(os.popen('python3 q06.py').read())
-aaa,0,6
-bbb,4,7
-ccc,0,1
-ddd,5,5
-eee,0,0
-fff,4,9
-ggg,3,3
-hhh,6,8
-iii,2,7
-jjj,2,5
+aaa,0,9
+bbb,0,9
+ccc,0,9
+ddd,0,9
+eee,0,7
+fff,0,9
+ggg,0,9
+hhh,0,9
+iii,0,9
+jjj,0,9
 <BLANKLINE>
 
 >>> import os; print(os.popen('python3 q07.py').read())

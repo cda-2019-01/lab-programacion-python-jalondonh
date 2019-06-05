@@ -17,3 +17,21 @@
 ## ('9', ['A', 'B', 'C', 'E'])
 ##
 ##
+import csv
+import collections
+import re
+data = open('data.csv','r').readlines()
+data = [row[0:-1] for row in data]
+patron = re.compile('\t|\s+')
+datasub = [re.sub(patron,'~',x) for x in data]
+datasplit = [re.split('~',x) for x in datasub]
+datacol2y1 =[[x[1],x[0]]for x in datasplit]
+datacol2y1sorted = sorted(datacol2y1)
+listadict= dict()
+for i in datacol2y1sorted:
+    if i[0] in listadict:
+        listadict[i[0]].append(i[1])
+    else:
+        listadict[i[0]] = [i[1]]
+for key,value in sorted(listadict.items()):
+    print((key,value))
